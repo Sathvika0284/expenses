@@ -1,0 +1,31 @@
+{
+  "name": "household-expenses-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack household expense tracker with Express backend, React 19.3 frontend, and Aiven MySQL integration",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "build": "npm --prefix client run build && npm --prefix server run prisma:generate",
+    "start": "npm --prefix server start",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "prisma:generate": "npm --prefix server run prisma:generate",
+    "prisma:migrate": "npm --prefix server run prisma:migrate",
+    "prisma:deploy": "npm --prefix server run prisma:deploy",
+    "prisma:push": "npm --prefix server run prisma:push"
+  },
+  "keywords": [
+    "household",
+    "expenses",
+    "monorepo",
+    "express",
+    "react-19",
+    "prisma",
+    "mysql"
+  ],
+  "author": "",
+  "license": "ISC"
+}
